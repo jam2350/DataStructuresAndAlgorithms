@@ -271,15 +271,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType>{
     		listIdx++;
     		//move the position of both lists over one because only copying over from second list
     	}
-    	//The running time of this method is: in the if() statement nested within a for loop there is a call to add which calls
-    	//getNode() on the input of other (N_2) which at worst traverses (N_2)/2 and getNode() on the original list, (N_1), 
-    	//which at worst takes (N_1)/2 time. This if statement is nested in a while loop
-    	//that runs at most as the size of the original list (N_1). This is therefore (((N_2)/2) + ((N_1)/2))*(N_1). The next 
-    	//while loop runs at most (N_2 - N_1) times because it runs on whatever has not been copied over from the first list 
-    	//into the second list. The inside of the while loop calls add which calls getNode() on the first list and calls getNode() 
-    	//on the second list which is (N_1)/2 and (N_2)/2 respectively. Therefore the full running time is: 
-    	//((N_2)/2 + (N_1)/2) * (N_1) + (N_2 - N_1) * ((N_1)/2 + (N_2)/2). This simplifies to (((N_1)+(N_2)) * (N_2)) / 2 which
-    	// has a a big O( (N_2)^2 )
+    	
     		
     }
     
